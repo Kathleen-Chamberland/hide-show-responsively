@@ -17,55 +17,71 @@ html {
   box-sizing: inherit;
 }
 
-img {
-  display: inline-block;
+body {
+  margin: .5em;
 }
 
-@media only screen and (min-width: 20em) {
+img {
+  display: block;
+  width: 100%;
+}
 
-  img {
-    width: 100%;
-  }
+.dino:nth-child(even) {
+  display: none;
+}
 
-  img:nth-child(even) {
-    display: none;
-  }
-
+.dino-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 25em) {
 
-  img {
-    width: 49%;
+  .dino:nth-child(even) {
     display: inline-block;
   }
 
-  img:nth-child(even) {
+  .dino:nth-child(odd) {
     display: inline-block;
+  }
+
+  .dino {
+    width: 50%;
   }
 
 }
 
 @media only screen and (min-width: 38em) {
 
-  img {
-    width: 32%;
+  .dino:nth-child(2), .dino:nth-child(3), .dino:nth-child(4) {
+    display: inline-block;
+    width: 33.333%;
   }
 
-  img:nth-child(1) {
+  .dino:first-child {
     display: none;
+  }
+
+  .dino {
+    margin: 0;
   }
 
 }
 
 @media only screen and (min-width: 60em) {
 
-  img {
-    width: 24.5%;
+  .dino:nth-child(2), .dino:nth-child(3), .dino:nth-child(4) {
+    display: inline-block;
+    width: 25%;
   }
 
-  img:first-child {
+  .dino:first-child {
     display: inline-block;
+    width: 25%;
+  }
+
+  .dino {
+    margin: 0;
   }
 
 }
